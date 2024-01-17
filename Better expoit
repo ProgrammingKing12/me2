@@ -13641,7 +13641,7 @@ workspace.GameEvents.GoToMenu:FireServer(7) ]]
 
 --DNA Farm Options | Spell DINO NAMES CORRECTLY!
 local YoungAdult = "Sauroposeidon" --Has to be 97% Young Adult (preferably: Baro)
-local Baby = "Brachiosaurus" --Has to be Baby, any % will do (preferably: Pue, Leed, Shasta, Sauroposeidon)
+local Baby = "Shasatasaurus" --Has to be Baby, any % will do (preferably: Pue, Leed, Shasta, Sauroposeidon)
 local no = false
 local yes = true
 
