@@ -1,25 +1,40 @@
-local p = game.Players.LocalPlayer
+local player = game.Players.LocalPlayer
 local whitelist = {
-   [p.Name] = true
+    [player.Name] = true
 }
 
-if whitelist[p.Name] then
-	game.StarterGui:SetCore("SendNotification", {
-Title = "Press [Y] To Toggle";
-Text = "Edits by the australian";
-Duration = 15;
-})
-local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
-game.StarterGui:SetCore("SendNotification", {
-Title = "Notice";
-Text = "Anti-Afk Ran"; 
-Duration = 10; })
-print("Anti-AFK Ran")
+if whitelist[player.Name] then
+    local notificationParams = {
+        Title = "Press [Y] To Toggle",
+        Text = "Edits by the Australian",
+        Duration = 15,
+        Button1 = "Okay",
+        Button2 = "Ignore",
+        Style = Enum.StudioStyleGuideColor.Notification,
+        Icon = "rbxassetid://1234567890",  -- Replace with your icon asset ID
+    }
+
+    game.StarterGui:SetCore("SendNotification", notificationParams)
+
+    local virtualUser = game:GetService("VirtualUser")
+    game.Players.LocalPlayer.Idled:Connect(function()
+        virtualUser:Button2Down(Vector2.new(0,0), game.Workspace.CurrentCamera.CFrame)
+        wait(1)
+        virtualUser:Button2Up(Vector2.new(0,0), game.Workspace.CurrentCamera.CFrame)
+    end)
+
+    local afkNotificationParams = {
+        Title = "Notice",
+        Text = "Anti-AFK Activated",
+        Duration = 10,
+        Button1 = "Got it",
+        Style = Enum.StudioStyleGuideColor.Notification,
+        Icon = "rbxassetid://987654321",  -- Replace with your icon asset ID
+    }
+
+    game.StarterGui:SetCore("SendNotification", afkNotificationParams)
+
+    print("Anti-AFK Activated")
 end
 
 
