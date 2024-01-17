@@ -13666,16 +13666,16 @@ while true do
 wait()
 if not _G.DNAFarmActive then return end
     if not game.Players.LocalPlayer.Character then
-        local CountDown = 4
+        local CountDown = 7
         local t = 1
         local c = game.Players.LocalPlayer.Character
         local Menu = workspace.GameEvents.GoToMenu
         workspace.GameEvents.ChangeDinosaur:FireServer(YoungAdult)
         Menu:FireServer(CountDown)
-        wait(1)
+        wait(2.5)
         workspace.GameEvents.StartPlayer:FireServer()
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
-        wait(2)
+        wait(3)
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
         workspace.GameEvents.StartPlayer:FireServer()
     end
@@ -13689,18 +13689,6 @@ if not _G.DNAFarmActive then return end
     end
 end
 end)
-      wait(3)
-
-    if player.Character then
-        wait(3)
-    end
-
-    if player.Character then
-        Menu:FireServer(7)
-        wait(8)
-    end
-end
-
 
 local togglegui = false
 bind = "y"
