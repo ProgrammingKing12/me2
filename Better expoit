@@ -13641,7 +13641,7 @@ workspace.GameEvents.GoToMenu:FireServer(7) ]]
 
 --DNA Farm Options | Spell DINO NAMES CORRECTLY!
 local YoungAdult = "Barosaurus" --Has to be 97% Young Adult (preferably: Baro)
-local Baby = "Sauroposeidon" --Has to be Baby, any % will do (preferably: Pue, Leed, Shasta, Sauroposeidon)
+local Baby = "Shastasaurus" --Has to be Baby, any % will do (preferably: Pue, Leed, Shasta, Sauroposeidon)
 local no = false
 local yes = true
 
@@ -13672,10 +13672,10 @@ if not _G.DNAFarmActive then return end
         local Menu = workspace.GameEvents.GoToMenu
         workspace.GameEvents.ChangeDinosaur:FireServer(YoungAdult)
         Menu:FireServer(CountDown)
-        wait(2.5)
+        wait(1)
         workspace.GameEvents.StartPlayer:FireServer()
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
-        wait(3)
+        wait(2)
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
         workspace.GameEvents.StartPlayer:FireServer()
     end
