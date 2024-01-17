@@ -13689,6 +13689,7 @@ if not _G.DNAFarmActive then return end
     end
 end
 end)
+      wait(3)
 
     if player.Character then
         wait(3)
