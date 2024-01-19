@@ -23,7 +23,6 @@ print("Anti-AFK Ran")
 end
 
 
-
 local Xcom911 = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local GUIHead = Instance.new("Frame")
@@ -11903,42 +11902,37 @@ end)
 end
 
 _G.AutoInstantElder = true
-
+--DNA Farm Script
 while true do
-    wait()
-    
-    if not _G.AutoInstantElder then
-        return
+wait()
+if not _G.AutoInstantElder then return end
+    if not game.Players.LocalPlayer.Character then
+    	local a = (Eldereddinoplus.Text)
+		local targ = (Targetdinoplus.Text)
+        local CountDown = 7
+        local t = 1
+        local c = game.Players.LocalPlayer.Character
+        local Menu = workspace.GameEvents.GoToMenu
+        workspace.GameEvents.ChangeDinosaur:FireServer(a)
+Menu:FireServer(CountDown)
+wait(5)
+workspace.GameEvents.StartPlayer:FireServer()
+workspace.GameEvents.ChangeDinosaur:FireServer(targ)
+Menu:FireServer(CountDown)
+wait(3)
+workspace.GameEvents.ChangeDinosaur:FireServer(targ)
+workspace.GameEvents.StartPlayer:FireServer()
     end
-
-    local localPlayer = game.Players.LocalPlayer
-    local character = localPlayer.Character
-
-    if not character then
-        local eldertarget = Eldereddinoplus.Text
-        local target = Targetdinoplus.Text
-        local countdown = 7
-
-        workspace.GameEvents.ChangeDinosaur:FireServer(eldertarget)
-        workspace.GameEvents.GoToMenu:FireServer(countdown)
-        wait(2)
-        workspace.GameEvents.StartPlayer:FireServer()
-
-        workspace.GameEvents.ChangeDinosaur:FireServer(target)
-        workspace.GameEvents.GoToMenu:FireServer(countdown)
-        wait(2)
-        workspace.GameEvents.ChangeDinosaur:FireServer(target)
-        workspace.GameEvents.StartPlayer:FireServer()
-    else
+    wait(2)
+    if game.Players.LocalPlayer.Character then
         wait(2)
     end
-
-    if character then
-        wait(2)
+    if game.Players.LocalPlayer.Character then
         workspace.GameEvents.GoToMenu:FireServer(7)
-        wait(8)
+        wait(5)
     end
 end
+end)
 
 
 ModFrame.Name = "ModFrame"
@@ -13582,7 +13576,7 @@ TextDNAfarm.BackgroundTransparency = 1
 TextDNAfarm.Position = UDim2.new(0.271247745, 0, 0.275278523, 0)
 TextDNAfarm.Size = UDim2.new(0, 252, 0, 60)
 TextDNAfarm.Font = Enum.Font.Nunito
-TextDNAfarm.Text = "Make your Brachiosaurus 97% Young Adult and your Futalonkosaurus baby 1% and hit fire da farm (Not as Consistent in Private Servers)."
+TextDNAfarm.Text = "Make your Brachiosaurus 97% Young Adult and your Diplodocus baby 1% and hit fire da farm (Not as Consistent in Private Servers)."
 TextDNAfarm.TextColor3 = Color3.fromRGB(242, 243, 243)
 TextDNAfarm.TextScaled = true
 TextDNAfarm.TextWrapped = true
@@ -13645,9 +13639,9 @@ player.Character.HumanoidRootPart.CFrame = CFrame.new(99999, 717.906067, -99972.
 wait(3)
 workspace.GameEvents.GoToMenu:FireServer(7) ]]
 
-
-local YoungAdult = "Brachiosaurus" 
-local Baby = "Futalognkosaurus" 
+--DNA Farm Options | Spell DINO NAMES CORRECTLY!
+local YoungAdult = "Brachiosaurus" --Has to be 97% Young Adult (preferably: Baro)
+local Baby = "Futalognkosaurus" --Has to be Baby, any % will do (preferably: Pue, Leed, Shasta, Sauroposeidon)
 local no = false
 local yes = true
 
@@ -13667,7 +13661,7 @@ if _G.DNAFarmActive then
     print("Anti-AFK Ran")
 end
 
-
+--DNA Farm Script
 while true do
 wait()
 if not _G.DNAFarmActive then return end
@@ -13678,10 +13672,10 @@ if not _G.DNAFarmActive then return end
         local Menu = workspace.GameEvents.GoToMenu
         workspace.GameEvents.ChangeDinosaur:FireServer(YoungAdult)
         Menu:FireServer(CountDown)
-        wait(1)
+        wait(2.5)
         workspace.GameEvents.StartPlayer:FireServer()
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
-        wait(2)
+        wait(3)
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
         workspace.GameEvents.StartPlayer:FireServer()
     end
