@@ -13636,7 +13636,7 @@ end
 
 local player = game.Players.LocalPlayer
 player.Character.HumanoidRootPart.CFrame = CFrame.new(99999, 717.906067, -99972.128204)
-wait(3)
+wait(2)
 workspace.GameEvents.GoToMenu:FireServer(7) ]]
 
 --DNA Farm Options | Spell DINO NAMES CORRECTLY!
@@ -13656,7 +13656,7 @@ if _G.DNAFarmActive then
     end)
     game.StarterGui:SetCore("SendNotification", {
     Title = "DNA FARM";
-    Text = "Launched : Anti-AFK Relaunched"; 
+    Text = "Launched : Anti-AFK nigger"; 
     Duration = 5; })
     print("Anti-AFK Ran")
 end
@@ -13675,7 +13675,9 @@ if not _G.DNAFarmActive then return end
         wait(1)
         workspace.GameEvents.StartPlayer:FireServer()
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
+        workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
         wait(1)
+        workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
         workspace.GameEvents.ChangeDinosaur:FireServer(Baby)
         workspace.GameEvents.StartPlayer:FireServer()
     end
